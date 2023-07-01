@@ -47,4 +47,6 @@ runs:
       shell: bash
       env: 
         BUTLER_API_KEY: ${{ inputs.api-key }}
-      run: ./butler push ${{ inputs.working-directory }} ${{ inputs.user }}/${{ inputs.game }}:${{ inputs.channel }}
+      run: |
+        echo ${{ inputs.working-directory }} ${{ inputs.user }}/${{ inputs.game }}:${{ inputs.channel }}
+        ./butler push ${{ inputs.working-directory }} ${{ inputs.user }}/${{ inputs.game }}:${{ inputs.channel }}
