@@ -49,7 +49,7 @@ runs:
         BUTLER_API_KEY: ${{ inputs.api-key }}
       run: |
         echo ${{ inputs.working-directory }} ${{ inputs.user }}/${{ inputs.game }}:${{ inputs.channel }}
-        cd /html
+        cd html
         ls
         cd ..
         ./butler push ${{ inputs.working-directory }} ${{ inputs.user }}/${{ inputs.game }}:${{ inputs.channel }}
