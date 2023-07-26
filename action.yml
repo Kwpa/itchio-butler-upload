@@ -49,4 +49,4 @@ runs:
         BUTLER_API_KEY: ${{ inputs.api-key }}
       run: |
         echo ${{ inputs.working-directory }} ${{ inputs.user }}/${{ inputs.game }}:${{ inputs.channel }}
-        ./butler push ${{ inputs.working-directory }} ${{ inputs.user }}/${{ inputs.game }}:${{ inputs.channel }}
+        ./butler push ${{ inputs.working-directory }} ${{ inputs.user }}/${{ inputs.game }}:${{ inputs.channel }} --userversion-file version.txt
